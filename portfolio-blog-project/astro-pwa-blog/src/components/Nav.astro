@@ -12,6 +12,8 @@ const { current = '' } = Astro.props;
     font-weight: 700;
     justify-content: flex-end;
     text-transform: uppercase;
+    background-color: transparent;
+    z-index: 2;
   }
 
   a {
@@ -21,6 +23,7 @@ const { current = '' } = Astro.props;
     display: block;
     position: relative;
     margin-left: 20px;
+    margin: auto 1vw;
   }
 
   a:not(.selected) {

@@ -8,20 +8,14 @@ const permalink = Astro.site.href;
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
+    <img alt='Headshot of Sandra Mago' src='/assets/header.jpg'>
     <div class="home-copy">
-      <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
+      <h1>Hey there,</h1>
+      <p>My name is Sandra Mago and I am a multimedia design student based in Aarhus. 
+      I am a half danish and half filipino (hence the unique last name) aspiring front-end 
+      developer and visual designer.</p>
     </div>
 
-    <figure>
-      <img alt='Illustration of person reading a book' src='/assets/home-illustration.webp'>
-      <figcaption>
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
-      </figcaption>
-    </figure>
   </div>
 </BaseLayout>
 
@@ -37,33 +31,31 @@ const permalink = Astro.site.href;
 
   .home-copy {
     flex: 1;
+    padding: 3em;
   }
 
   h1 {
     font-weight: 700;
     margin-bottom: 0.5em;
+    position: relative;
+    z-index: 10;
+    width: 300px;
   }
 
   p {
     font-size: 1.4em;
     line-height: 1.5;
-  }
-
-  figure {
-    margin: 0 1em;
-    text-align: center;
-  }
-
-  figcaption {
-    font-size: .8em;
-    font-style: italic;
-    text-align: left;
+    position: relative;
+    z-index: 10;
+    width: 300px;
   }
 
   img {
-    width: 100%;
-    max-width: 550px;
-    margin-bottom: 1em;
+    width: 95%;
+    height: 100vh;
+    margin: 0 0 1em;
+    object-fit: cover;
+    position: absolute;
   }
 
   @media (max-width: 1200px) {
@@ -72,7 +64,7 @@ const permalink = Astro.site.href;
     }
 
     img {
-      max-width: 400px;
+      width: 100%;
     }
   }
 
@@ -85,6 +77,12 @@ const permalink = Astro.site.href;
       flex: 0;
       padding-bottom: 2em;
       text-align: center;
+    }
+
+    img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
     }
   }
 </style>
